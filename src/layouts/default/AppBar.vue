@@ -3,9 +3,9 @@
     <v-list-item class="d-none d-md-block" v-for="(item, index) in menuItems" link :key="index" :title="item.label"
       :href="item.routeName"></v-list-item>
     <template v-slot:prepend>
-      <v-icon class="ml-12">
+      <router-link to="/">
         <img src="@/assets/aisa-logo.svg" alt="Logo" height="100" width="100" />
-      </v-icon>
+      </router-link>
     </template>
     <v-app-bar-nav-icon class="d-block d-md-none" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
   </v-app-bar>
