@@ -1,0 +1,16 @@
+html {
+	overflow: hidden;
+	overscroll-behavior: none;
+	box-sizing: border-box;
+	word-break: normal;
+	height: 100dvh !important;
+}
+
+#page-container {
+	overflow-y: hidden;
+	height: 100lvh !important;
+}
+
+#app-container {
+	margin: 0 auto;
+}
