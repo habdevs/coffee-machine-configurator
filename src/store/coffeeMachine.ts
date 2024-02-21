@@ -37,5 +37,16 @@ export const useCoffeeMachineStore = defineStore('coffeeMachine', {
       this.storedItems.push(newItem);
       console.log(`Добавлен элемент в хранилище:`, newItem);
     },
+    editStorageItem(itemId: string, newDrinkCount: number) {
+      const itemIndex = this.storedItems.findIndex((item) => item.id === itemId);
+      if (itemIndex !== -1) {
+        this.storedItems[itemIndex].drinkCount = newDrinkCount;
+        console.log(`Изменено количество напитков для элемента с id ${itemId}: ${newDrinkCount}`);
+      }
+    },
+    removeStorageItem(itemId: string) {
+    this.storedItems = this.storedItems.filter(item => item.id !== itemId);
+    console.log(`Элемент с id ${itemId} удален из хранилища`);
+  },
   },
 })
